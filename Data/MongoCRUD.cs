@@ -59,23 +59,7 @@ namespace Inlamning_3_Databashantering.Data
             }
             
         }
-   //  public void UpdateProductsAndCart(string productTable, string customerTable, ProductModel updatedProduct)
-   //  {
-   //      var productCollection = db.GetCollection<ProductModel>(productTable);
-   //      var customerCollection = db.GetCollection<CustomerModel>(customerTable);
-   //
-   //      var productFilter = Builders<ProductModel>.Filter.Eq(x => x.Id, updatedProduct.Id);
-   //      var productUpdate = Builders<ProductModel>.Update.Set(x => x.Name, updatedProduct.Name).Set(x => x.Price, updatedProduct.Price);
-   //
-   //      productCollection.UpdateOne(productFilter, productUpdate);
-   //
-   //      var customerFilter = Builders<CustomerModel>.Filter.ElemMatch(x => x.Cart, y => y.Id == updatedProduct.Id);
-   //      var customerUpdate = Builders<CustomerModel>.Update.Set("Cart.$[].Name", updatedProduct.Name).Set("Cart.$[].Price", updatedProduct.Price);
-   //
-   //      customerCollection.UpdateMany(customerFilter, customerUpdate);  
-   //
-   //
-   //  }
+ 
        
         public Task UpdateProductInAllCarts(string table, Guid productId, string newName, int newPrice)
         {
