@@ -56,8 +56,9 @@ namespace Inlamning_3_Databashantering
               db.CreateRecord("CustomerDB", newCustomer);
               MessageBox.Show("Customer added");
               UserNameTXB.Clear();
-              PasswordTXB.Clear();    
-              }
+              PasswordTXB.Clear();
+                models = db.LoadRecord<CustomerModel>("CustomerDB");
+            }
               else
               {
                   MessageBox.Show("Username already exist");
